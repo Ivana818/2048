@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomNum = Math.floor(Math.random() * squares.length)
         if (squares[randomNum].innerHTML == 0) {
             squares[randomNum].innerHTML = 2
+            endGame()
         }
         else generate()
     }
@@ -71,11 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 let row = [parseInt(valone), parseInt(valtwo), parseInt(valthree), parseInt(valfour)]
                 
                 let filteredRow = row.filter(num => num)
-                console.log(filteredRow)
+                // console.log(filteredRow)
                 let missing = 4 - filteredRow.length
                 let zeros = Array(missing).fill(0)
                 let newRow = zeros.concat(filteredRow)
-                console.log(newRow)
+                // console.log(newRow)
                 squares[i].innerHTML = newRow[0]
                 squares[i+1].innerHTML = newRow[1]
                 squares[i+2].innerHTML = newRow[2]
@@ -94,11 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 let row = [parseInt(valone), parseInt(valtwo), parseInt(valthree), parseInt(valfour)]
                 
                 let filteredRow = row.filter(num => num)
-                console.log(filteredRow)
+                // console.log(filteredRow)
                 let missing = 4 - filteredRow.length
                 let zeros = Array(missing).fill(0)
                 let newRow = filteredRow.concat(zeros)
-                console.log(newRow)
+                // console.log(newRow)
                 squares[i].innerHTML = newRow[0]
                 squares[i+1].innerHTML = newRow[1]
                 squares[i+2].innerHTML = newRow[2]
@@ -116,11 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
             let col = [parseInt(valone), parseInt(valtwo), parseInt(valthree), parseInt(valfour)]
 
             let filteredCol= col.filter(num => num)
-            console.log(filteredCol)
+            // console.log(filteredCol)
             let missing = 4 - filteredCol.length
             let zeros = Array(missing).fill(0)
             let newCol = zeros.concat(filteredCol)
-            console.log(newCol)
+            // console.log(newCol)
             squares[i].innerHTML = newCol[0]
             squares[i+width].innerHTML = newCol[1]
             squares[i+width*2].innerHTML = newCol[2]
@@ -138,11 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
             let col = [parseInt(valone), parseInt(valtwo), parseInt(valthree), parseInt(valfour)]
 
             let filteredCol= col.filter(num => num)
-            console.log(filteredCol)
+            // console.log(filteredCol)
             let missing = 4 - filteredCol.length
             let zeros = Array(missing).fill(0)
             let newCol = filteredCol.concat(zeros)
-            console.log(newCol)
+            // console.log(newCol)
             squares[i].innerHTML = newCol[0]
             squares[i+width].innerHTML = newCol[1]
             squares[i+width*2].innerHTML = newCol[2]
