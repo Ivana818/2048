@@ -20,23 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomNum = Math.floor(Math.random() * squares.length)
         if (squares[randomNum].innerHTML == 0) {
             squares[randomNum].innerHTML = 2
-            endGame()
+            // endGame()
         }
         else generate()
     }
 
-    function endGame(){
-        let zeros = 0
-        for (let i = 0; i < squares.length; i++){
-            if (squares.innerHTML == 0){
-                zeros++
-            }
-        }
+    // function endGame(){
+    //     let zeros = 0
+    //     for (let i = 0; i < squares.length; i++){
+    //         if (squares.innerHTML == 0){
+    //             zeros++
+    //         }
+    //     }
         // if (zeros === 0) {
         //     document.removeEventListener('keydown', control)
         //     alert("Lose")
         // }
-    }
+    // }
 
     function combineRow(){
         for (let i = 0; i < 15; i++){
