@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 zeros++
             }
         }
-        if (zeros === 0) {
-            document.removeEventListener('keydown', control)
-            alert("Lose")
-        }
+        // if (zeros === 0) {
+        //     document.removeEventListener('keydown', control)
+        //     alert("Lose")
+        // }
     }
 
     function combineRow(){
